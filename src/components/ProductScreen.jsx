@@ -17,7 +17,7 @@ function ProductScreen(props) {
     };
   }, []);
 
-  const handleCart = () => {
+  const handleAddToCart = () => {
     props.history.push("/cart/" + props.match.params.id + "?qty=" + qty);
   };
 
@@ -77,7 +77,7 @@ function ProductScreen(props) {
               </li>
               <li>
                 {product.countInStock > 0 && (
-                  <button onClick={handleCart}>Add to Cart</button>
+                  <button onClick={handleAddToCart}>Add to Cart</button>
                 )}
               </li>
             </ul>
